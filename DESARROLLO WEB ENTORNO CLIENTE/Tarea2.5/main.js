@@ -16,20 +16,31 @@
  * template String para evitar la concatenación de cadenas
  * error.message en caso de tener que capturar una excepción
  */
+const array_datos = [
+    42,
+    "Hola!",
+    true,
+    undefined,
+    NaN,
+    Infinity,
+    null,
+    123456789n,
+    function () {
+        return 1;
+    },
+    [1, 2, 3],
+];
+document.addEventListener("DOMContentLoaded", function () {
+    let resultados = document.getElementById('resultados');
+    array_datos.forEach(element => {
+        if (typeof element == "string" ||
+            typeof element == "number" ||
+            typeof element == "boolean" ||
+            typeof element == "undefined") {
+            resultados.innerHTML += <li>PRIMITIVO - <strong>${typeof element}</strong>: ${element}</li>;
 
-
-{
-    let datos = [6, 6n, "hola y adios", undefined, true, new Date(), null, function suma(a, b) { return a + b }, [1, 2, 3, 4, 5], NaN];
-
-    for (let dato of datos) {
-        try {
-            if (typeof dato === 'object' || typeof dato === 'function') {
-                console.log(`OBJETO - (${dato instanceof dato.constructor}) - de tipo ${dato.constructor.name} - ${dato}`);
-            } else {
-                console.log(`PRIMITIVO - (${typeof dato}) - ${dato}`);
-            }
-        } catch (error) {
-            console.log(`ERROR: ${error.message}`);
-        }
-    }
-}
+        } else {
+            resultados.innerHTML += <li>OBJETO - ${typeof element}: ${element}</li>;
+        }
+    });
+});
