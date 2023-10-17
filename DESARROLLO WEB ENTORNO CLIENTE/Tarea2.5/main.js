@@ -16,6 +16,7 @@
  * template String para evitar la concatenación de cadenas
  * error.message en caso de tener que capturar una excepción
  */
+
 const array_datos = [
     42,
     "Hola!",
@@ -30,6 +31,7 @@ const array_datos = [
     },
     [1, 2, 3],
 ];
+
 document.addEventListener("DOMContentLoaded", function () {
     let resultados = document.getElementById('resultados');
     array_datos.forEach(element => {
@@ -37,10 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
             typeof element == "number" ||
             typeof element == "boolean" ||
             typeof element == "undefined") {
-            resultados.innerHTML += <li>PRIMITIVO - <strong>${typeof element}</strong>: ${element}</li>;
-
+            resultados.innerHTML += '<li>PRIMITIVO - <strong>' + typeof element + '</strong>: ' + element + '</li>';
         } else {
-            resultados.innerHTML += <li>OBJETO - ${typeof element}: ${element}</li>;
-        }
-    });
+            try {
+                resultados.innerHTML += '<li>OBJETO - ' + (element instanceof Object) + ' - de tipo ' + element.constructor.name + ': ' + element + '</li>';
+            } catch (error) {
+                resultados.innerHTML += '<li>ERROR - ' + error.message + '</li>';
+            }
+        }
+    });
 });
