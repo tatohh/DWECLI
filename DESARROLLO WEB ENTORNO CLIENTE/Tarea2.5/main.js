@@ -19,7 +19,7 @@
 
 const array_datos = [
     42,
-    "Hola!",
+    "Hola y Adios",
     true,
     undefined,
     NaN,
