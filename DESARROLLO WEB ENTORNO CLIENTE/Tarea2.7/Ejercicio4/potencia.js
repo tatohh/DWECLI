@@ -17,7 +17,7 @@ console.log("--Potencia--");
  */
 function potencia(base) {
     return function (exp) {
-        return exp**base;
+        return Math.pow(base,exp);
     };
 }
 
