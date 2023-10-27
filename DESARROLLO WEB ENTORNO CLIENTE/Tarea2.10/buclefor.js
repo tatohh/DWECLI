@@ -41,15 +41,15 @@ for (let caracter of cadena) {
 
  // Ejercicio 3
 
-let objetoPepe = {
+let objetoHector = {
     nombre: "Héctor",
     apellido: "Cevallos",
     edad: 42,
     pelo: "Negro Azabache",
 };
 
-for (let propiedad in objetoPepe) {
-    console.log(objetoPepe[propiedad]);
+for (let propiedad in objetoHector) {
+    console.log(objetoHector[propiedad]);
 };
 
 
@@ -61,8 +61,8 @@ for (let indice in array) {
     console.log(array[indice]);
 };
 
-for (let propiedad in objetoPepe) {
-    console.log(objetoPepe[propiedad]);
+for (let propiedad in objetoHector) {
+    console.log(objetoHector[propiedad]);
 };
 
 
