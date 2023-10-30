@@ -67,5 +67,5 @@ function Alumno(nombre, apellido, edad, curso) {
     };
     
 }
-const alumnoDefault = new Alumno();
+const alumnoDefault = new Alumno({nombre: "Hector"});
     console.log(alumnoDefault);
