@@ -3,9 +3,15 @@
  * 2. Invierte.  Transforma entrada a otra similiar con las mayúsculas/minúsculas invertidas.
  * 3. CamelCase.  Transforma entrada a otra similiar con formato en Camel Case (hola amigos cómo estáis -> holaAmigosCómoEstáis)
  * 4. Sin CamelCase.  Transforma entrada a otra similiar quitando el formato Camel Case (holaAmigosCómoEstáis -> hola amigos cómo estáis)
- * 5. Finaliza... Averigua si una cadena acaba con otra.
- * 6. Empieza... Averigua si una cadena comienza con otra.
- * 7. DNI. Indica error en caso de que la entrada no sea DNI válido. Usa expresiones regulares con grupos de captura en la comprobación de la letra
+ * 5. snakeCaseToCssCase: Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CSS (hola_aMigos_cómo_esTáis  -> hola-amigos-cómo-estáis)
+ * 6. snakeCaseToCamelCase: Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CamelCase  (hola_aMigos_cómo_esTáis  -> holaAmigosCómoEstáis)
+ * 7. Finaliza... Averigua si una cadena acaba con otra.
+ * 8. Empieza... Averigua si una cadena comienza con otra.
+ * 9. DNI. Indica error en caso de que la entrada no sea DNI válido. Usa expresiones regulares con grupos de captura en la comprobación de la letra
+ *10. Matrículas. Extrae todas las matrículas válidas de una caja de texto.
+ *11. Códigos postales. Extrae todos los códigos postales válidos de una caja de texto. Códigos postales:
+ *12. Dirección MAC. Comprueba que una entrada sea una MAC válida. Puedes usar.
+ *13. Dirección IP.  Comprueba que una entrada sea una IP válida
  * 
  * @author: Héctor Cevallos Paredes
  * 
@@ -13,7 +19,9 @@
 
 {
     /**
-        * Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CamelCase.
+        * snakeCaseToCamelCase: Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CamelCase  
+        * (hola_aMigos_cómo_esTáis  -> holaAmigosCómoEstáis)
+        *
         * @param {*} cadena 
         * @returns 
         */
@@ -25,7 +33,9 @@
 
 
     /**
-    * Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CSS.
+    * snakeCaseToCssCase: Transforma entrada a otra similar quitando el formato snake y pasándolo a formato CSS 
+    * (hola_aMigos_cómo_esTáis  -> hola-amigos-cómo-estáis)
+    * 
     * @param {*} cadena 
     * @returns 
     */
@@ -37,7 +47,7 @@
 
 
         /**
-         * Transforma entrada a otra similiar con la primera letra de cada palabra en mayúscula.
+         * Capitaliza. Transforma entrada a otra similiar con la primera letra de cada palabra en mayúscula.
          * @param {*} cadena 
          * @returns x
          */      
@@ -47,7 +57,7 @@
         }
 
         /**
-         * Transforma entrada a otra similiar con las mayúsculas/minúsculas invertidas.
+         * Invierte. Transforma entrada a otra similiar con las mayúsculas/minúsculas invertidas.
          * @param {*} cadena 
          * @returns 
          */
@@ -61,7 +71,7 @@
         }
 
         /**
-         * Transforma entrada a otra similiar con formato en Camel Case (hola amigos cómo estáis -> holaAmigosCómoEstáis)
+         * CamelCase. Transforma entrada a otra similiar con formato en Camel Case (hola amigos cómo estáis -> holaAmigosCómoEstáis)
          * @param {*} cadena 
          * @returns 
          */
@@ -74,7 +84,7 @@
         }
 
         /**
-         * Transforma entrada a otra similiar quitando el formato Camel Case (holaAmigosCómoEstáis -> hola amigos cómo estáis)
+         * Sin CamelCase. Transforma entrada a otra similiar quitando el formato Camel Case (holaAmigosCómoEstáis -> hola amigos cómo estáis)
          * @param {*} cadena 
          * @returns 
          */
@@ -88,7 +98,7 @@
 
 
         /**
-         * Averigua si una cadena acaba con otra.
+         * Finaliza. Averigua si una cadena acaba con otra.
          * @param {*} cadena 
          * @param {*} palabraFinal 
          * @returns 
@@ -103,7 +113,7 @@
         }
 
         /**
-         * 
+         * Empieza... Averigua si una cadena comienza con otra.
          * @param {*} cadena 
          * @param {*} palabraInicial 
          * @returns 
@@ -118,7 +128,7 @@
         }
 
         /**
-         * Indica error en caso de que la entrada no sea DNI válido. Usa expresiones regulares con grupos de captura en la comprobación de la letra
+         * DNI. Indica error en caso de que la entrada no sea DNI válido. Usa expresiones regulares con grupos de captura en la comprobación de la letra
          * @param {*} cadena 
          * @returns 
          */
@@ -138,7 +148,7 @@
         }
 
         /**
-         * 
+         * Matrículas. Extrae todas las matrículas válidas de una caja de texto.
          * @param {*} cadena 
          * @returns 
          */
@@ -151,7 +161,7 @@
         }
         
         /**
-         * 
+         * Códigos postales. Extrae todos los códigos postales válidos de una caja de texto. Códigos postales:
          * @param {*} cadena 
          * @returns 
          */
@@ -164,7 +174,7 @@
         }
 
         /**
-         * 
+         * Dirección MAC. Comprueba que una entrada sea una MAC válida. Puedes usar.
          * @param {*} cadena 
          * @returns 
          */
@@ -177,7 +187,7 @@
         }
 
         /**
-         * 
+         * Dirección IP.  Comprueba que una entrada sea una IP válida
          * @param {*} cadena 
          * @returns 
          */
