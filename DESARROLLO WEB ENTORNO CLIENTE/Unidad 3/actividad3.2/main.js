@@ -105,7 +105,7 @@
          */
         function finalizaFunction(cadena, palabraFinal) {
             cadena = cadena.split(" ");
-            if (palabraFinal == cadena[cadena.length - 1]) {
+            if (palabraFinal === cadena[cadena.length - 1]) {
                 return `La cadena finaliza con cadena ${palabraFinal}`;
             } else {
                 return `La cadena no finaliza con cadena ${palabraFinal}`;
@@ -120,7 +120,7 @@
          */
         function comienzaFunction(cadena, palabraInicial) {
             cadena = cadena.split(" ");
-            if (palabraInicial == cadena[0]) {
+            if (palabraInicial === cadena[0]) {
                 return `La cadena comienza con cadena ${palabraInicial}`;
             } else {
                 return `La cadena no comienza con cadena ${palabraInicial}`;
@@ -133,11 +133,13 @@
          * @returns 
          */
         function validacionDniFunction(cadena) {
-            if (/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i.test(cadena)) {
-                let DNINumero = parseInt(cadena.substring(0, 8));
-                let DNILetra = cadena.substring(8,9).toUpperCase();
+            let cadenaTrim = cadena.trim(); // Elimino espacios al principio y al final de la cedena.
+
+            if (/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i.test(cadenaTrim)) {
+                let DNINumero = parseInt(cadenaTrim.substring(0, 8));
+                let DNILetra = cadenaTrim.substring(8,9).toUpperCase();
                 let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
-                if (letras[DNINumero%23] == DNILetra) {
+                if (letras[DNINumero % 23] === DNILetra) {
                     return "Dni valido";
                 } else {
                     return "Letra no valida";
