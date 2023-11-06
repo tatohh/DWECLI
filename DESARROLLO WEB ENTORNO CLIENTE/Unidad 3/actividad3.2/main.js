@@ -168,7 +168,7 @@
          * @returns 
          */
         function validacionCodigoPostalFunction(cadena) {
-            if ( /\b(50|51|52|[1-4][0-9]|0[1-9])(\d\d[1-9]|\d[1-9]\d|[1-9])/gi.test(cadena)) {
+            if ( /\b(50|51|52|[1-4][0-9]|0[1-9])(\d\d[1-9]|\d[1-9]\d|[1-9])/g.test(cadena)) {
                 return "Codigo postal valido";
             } else {
                 return "Codigo postal no valido";
